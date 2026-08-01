@@ -499,7 +499,7 @@
             
             row.innerHTML = `
                 <td><input type="checkbox" class="select-check" data-firebase-id="${obj.firebaseId}"></td>
-                <td><a href="./order_details.html?id=${obj.id}" class="order-link" title="فتح التفاصيل">#${obj.id}</a></td>
+                <td><a href="./order-details.html?id=${obj.id}" class="order-link" title="فتح التفاصيل">#${obj.id}</a></td>
                 <td><input type="text" class="excel-input" value="${obj.type || ''}" data-old="${obj.type || ''}" onfocus="this.dataset.old=this.value" onkeyup="updateDateField(this); debouncedSave('${obj.firebaseId}');" onblur="logEdit('اسم الطلب', this, '${obj.comp}', '${obj.firebaseId}')"></td>
                 <td><input type="text" class="excel-input readonly-input" value="${obj.date}" readonly style="color:var(--text-muted); font-weight:700;"></td>
                 <td><input type="text" class="excel-input" value="${obj.comp || ''}" data-old="${obj.comp || ''}" onfocus="this.dataset.old=this.value" onkeyup="updateDateField(this); debouncedSave('${obj.firebaseId}');" onblur="logEdit('الشركة', this, '${obj.comp}', '${obj.firebaseId}')"></td>
